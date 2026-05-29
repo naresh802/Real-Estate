@@ -1,5 +1,14 @@
 @import "tailwindcss";
 
+/* ── Lufga (not on Google Fonts – load via @font-face from CDN) ── */
+@font-face {
+  font-family: "Lufga";
+  src: url("https://fonts.cdnfonts.com/css/lufga") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -10,17 +19,118 @@
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --font-dm-sans: var(--font-dm-sans);
+  --font-plus-jakarta: var(--font-plus-jakarta);
+  --font-inter: var(--font-inter);
 }
 
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+/* ─────────────────────────────────────────────
+   H1 — reusable heading class
+───────────────────────────────────────────── */
+h1,
+.h1 {
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
+  font-weight: 600;
+  font-size: 56px;
+  line-height: 100%;
+  letter-spacing: 0%;
+  font-style: normal;
+}
+
+/* ─────────────────────────────────────────────
+   .sub-desc — reusable sub-heading / body class
+───────────────────────────────────────────── */
+.sub-desc {
+  font-family: "Lufga", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 36px;
+  letter-spacing: 0%;
+}
+.nav {
+  font-family: "DM Sans", sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 36px; 
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}  
+
+/* ─────────────────────────────────────────────
+   Plus Jakarta Sans Heading & Text Classes
+───────────────────────────────────────────── */
+.deals-heading {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 40px;
+  line-height: 140%;
+  letter-spacing: -0.01em;
+}
+
+.deals-desc {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 160%;
+  letter-spacing: 0%;
+}
+
+.deals-tab {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.5px;
+}
+
+/* ─────────────────────────────────────────────
+   Property Card Classes
+───────────────────────────────────────────── */
+.card-title {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 24px;
+  line-height: 150%;
+  letter-spacing: -0.01em;
+}
+
+.card-desc {
+  font-family: var(--font-plus-jakarta), "Plus Jakarta Sans", sans-serif;
+  font-weight: 500;
+  font-style: normal;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0%;
+}
+
+/* ─────────────────────────────────────────────
+   Good Hands Section — DM Sans Typography
+───────────────────────────────────────────── */
+.goodhands-heading {
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 50px;
+  letter-spacing: 2.26px;
+}
+
+.goodhands-desc {
+  font-family: var(--font-dm-sans), "DM Sans", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 22px;
+  line-height: 28px;
+  letter-spacing: -0.5px;
 }
